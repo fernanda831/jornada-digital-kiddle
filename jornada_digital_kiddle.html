@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minha Jornada no Mundo Digital</title>
+  <style>
+    :root{
+      --bg:#fff8ec;--card:#ffffff;--ink:#243142;--muted:#64748b;--brand:#6c5ce7;--brand2:#00c2a8;--accent:#ffbe3d;--danger:#ff6b6b;--line:#e8e2d6;
+      --shadow:0 18px 50px rgba(36,49,66,.12);--radius:28px;
+    }
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(circle at top left,#e9f9ff 0,#fff8ec 38%,#fff2d8 100%);color:var(--ink)}
+    .wrap{max-width:980px;margin:auto;padding:22px}.hero{min-height:100vh;display:grid;place-items:center}.card{background:rgba(255,255,255,.88);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.7);box-shadow:var(--shadow);border-radius:var(--radius);padding:clamp(22px,4vw,42px)}
+    h1{font-size:clamp(34px,7vw,64px);line-height:1;margin:0 0 14px} h2{font-size:clamp(28px,5vw,44px);line-height:1.05;margin:0 0 12px} p{font-size:18px;line-height:1.55;color:var(--muted)}
+    .badge{display:inline-flex;gap:8px;align-items:center;background:#fff0c2;border:1px solid #ffe08a;border-radius:999px;padding:8px 13px;font-weight:800;margin-bottom:18px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.field{display:grid;gap:7px;margin:12px 0}.field label{font-weight:800}.field input,.field select,textarea{width:100%;border:2px solid var(--line);border-radius:18px;padding:14px 15px;font-size:16px;background:#fff}textarea{min-height:96px;resize:vertical}
+    .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.btn{border:0;border-radius:999px;padding:14px 20px;font-weight:900;font-size:16px;cursor:pointer;background:var(--brand);color:#fff;box-shadow:0 10px 24px rgba(108,92,231,.22)}.btn.secondary{background:#fff;color:var(--ink);border:2px solid var(--line);box-shadow:none}.btn.green{background:var(--brand2)}.btn.warn{background:var(--accent);color:#352400}.step{display:none;min-height:100vh;align-items:center}.step.active{display:grid}.progress{height:12px;background:#efe8dc;border-radius:999px;overflow:hidden;margin:14px 0 26px}.bar{height:100%;background:linear-gradient(90deg,var(--brand2),var(--brand));width:0;transition:.35s}
+    .option{border:2px solid var(--line);border-radius:22px;background:#fff;padding:16px;text-align:left;cursor:pointer;font-weight:900;min-height:74px;display:flex;align-items:center;gap:10px;transition:.15s}.option span{font-size:28px}.option.selected{border-color:var(--brand);background:#f2f0ff;transform:translateY(-2px)}.option.alert.selected{border-color:var(--danger);background:#fff0f0}.avatar{font-size:52px;justify-content:center;min-height:92px}.result{background:#f0fffb;border:2px dashed var(--brand2);padding:16px;border-radius:22px;font-weight:900;margin-top:16px}.notice{display:none;background:#fff6f6;border:2px solid #ffd3d3;border-radius:22px;padding:16px;margin-top:16px}.notice.show{display:block}.summaryBox{background:#fff;border:2px solid var(--line);border-radius:22px;padding:22px;margin-top:16px}.small{font-size:14px;color:var(--muted)}
+    @media(max-width:720px){.grid,.grid3{grid-template-columns:1fr}.wrap{padding:14px}.card{border-radius:22px}.btn{width:100%}.btns{gap:8px}p{font-size:16px}.option{min-height:auto}}
+    @media print{body{background:#fff}.noPrint,.progress,.btns{display:none!important}.step{display:block;min-height:auto}.card{box-shadow:none;border:0}.wrap{max-width:760px}.onlyPrint{display:block!important}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section id="screen0" class="hero step active">
+      <div class="card">
+        <div class="badge">🚀 Jornada em família</div>
+        <h1>Minha Jornada no Mundo Digital</h1>
+        <p><strong>Bem-vindos, exploradores!</strong> A internet faz parte da vida das crianças. É onde elas aprendem, criam, se divertem e descobrem coisas novas todos os dias.</p>
+        <p>Por isso, criamos esta jornada para ser um momento de conexão entre crianças e adultos. Um espaço para conversar, compartilhar experiências e olhar juntos para tudo o que aconteceu no mundo digital.</p>
+        <p>Aqui, não estamos contando minutos de tela nem avaliando tarefas. Estamos explorando histórias, aprendizados, emoções e descobertas.</p>
+        <p>Porque uma internet mais segura não nasce do controle. Ela nasce da presença, do diálogo e da confiança.</p>
+        <p>Quando algo parece estranho, confuso ou desconfortável, pedir ajuda é sempre a melhor escolha.</p>
+        <p>Na Kiddle, acreditamos que toda grande aventura digital fica ainda melhor quando é vivida junto.</p>
+        <p><strong>🕵️ Agora conte para a gente: por onde a internet te levou nos últimos dias? Vamos revisitar essa jornada juntos!</strong></p>
+        <button class="btn" onclick="go(1)">Começar jornada</button>
+      </div>
+    </section>
+
+    <section id="screen1" class="step"><div class="card"><Top></Top><h2>1. Monte seu Explorador Digital</h2>
+      <div class="grid"><div class="field"><label>Nome</label><input id="nome" placeholder="Ex: Sofia" oninput="save()"></div><div class="field"><label>Idade</label><input id="idade" type="number" min="3" max="12" placeholder="Ex: 7" oninput="save()"></div></div>
+      <p><strong>Escolha um avatar:</strong></p><div class="grid3" data-group="avatar"><button class="option avatar" data-val="🧑‍🚀">🧑‍🚀</button><button class="option avatar" data-val="🦸">🦸</button><button class="option avatar" data-val="🧙">🧙</button><button class="option avatar" data-val="🕵️">🕵️</button><button class="option avatar" data-val="🧚">🧚</button><button class="option avatar" data-val="🤖">🤖</button></div>
+      <p><strong>Escolha um superpoder:</strong></p><div class="grid" data-group="poder"><button class="option" data-val="Lupa da Curiosidade">🔎 Lupa da Curiosidade</button><button class="option" data-val="Escudo da Segurança">🛡️ Escudo da Segurança</button><button class="option" data-val="Capa da Criatividade">🎨 Capa da Criatividade</button><button class="option" data-val="Radar da Coragem">📡 Radar da Coragem</button></div>
+      <div id="avatarResult" class="result">Hoje, você é um Explorador Digital!</div><Nav prev="0" next="2"></Nav></div></section>
+
+    <section id="screen2" class="step"><div class="card"><Top></Top><h2>2. Mapa da semana: o que eu explorei?</h2><p>Toque nos territórios digitais visitados nos últimos dias.</p>
+      <div class="grid" data-multi="territorios"><button class="option" data-val="Jogos">🏰 Jogos</button><button class="option" data-val="Histórias">📚 Histórias</button><button class="option" data-val="Criatividade">🎨 Criatividade</button><button class="option" data-val="Música">🎵 Música</button><button class="option" data-val="Vídeos">🎬 Vídeos</button><button class="option" data-val="Rede social">🌐 Rede social</button><button class="option" data-val="Aulas">👩‍🏫 Aulas</button><button class="option" data-val="Livros">📖 Livros</button></div><Nav prev="1" next="3"></Nav></div></section>
+
+    <section id="screen3" class="step"><div class="card"><Top></Top><h2>3. Quando explorei, eu...</h2>
+      <div class="grid" data-multi="semana"><button class="option" data-val="Aprendi algo novo">💡 Aprendi algo novo</button><button class="option" data-val="Fiz uma pausa">⏸️ Fiz uma pausa</button><button class="option" data-val="Criei alguma coisa">🧩 Criei alguma coisa</button><button class="option" data-val="Li uma história">📚 Li uma história</button><button class="option" data-val="Assisti junto com alguém">👪 Assisti junto com alguém</button><button class="option" data-val="Ensinei algo para alguém">⭐ Ensinei algo para alguém</button></div>
+      <div class="field"><label>Também fiz atividades fora da tela, como...</label><textarea id="foraTela" placeholder="Ex: desenhar, correr, brincar, ler..." oninput="save()"></textarea></div><Nav prev="2" next="4"></Nav></div></section>
+
+    <section id="screen4" class="step"><div class="card"><Top></Top><h2>4. Cumpri quais missões?</h2>
+      <div class="grid" data-multi="missoes"><button class="option" data-val="Usei a internet com adulto por perto">🧑‍🧒 Usei a internet com adulto por perto</button><button class="option" data-val="Preenchi o tempo com atividades fora da tela">🌳 Fiz atividades fora da tela</button><button class="option" data-val="Pedi ajuda quando precisei">🙋 Pedi ajuda quando precisei</button><button class="option" data-val="Desliguei quando algo não estava legal">🔌 Desliguei quando algo não estava legal</button><button class="option" data-val="Contei o que vi para um adulto">💬 Contei o que vi para um adulto</button><button class="option" data-val="Respeitei o tempo combinado de tela">⏰ Respeitei o tempo combinado</button><button class="option" data-val="Ouvi meu corpo e minhas emoções">💛 Ouvi meu corpo e minhas emoções</button></div>
+      <div id="missionDone" class="result">⭐ Marque suas missões da semana!</div><Nav prev="3" next="5"></Nav></div></section>
+
+    <section id="screen5" class="step"><div class="card"><Top></Top><h2>5. Detetive Digital: como me senti?</h2>
+      <div class="grid3" data-multi="emocoes"><button class="option" data-val="Legal">😄 Legal</button><button class="option" data-val="Engraçado">😂 Engraçado</button><button class="option" data-val="Interessante">🤔 Interessante</button><button class="option alert" data-val="Confuso">😕 Confuso</button><button class="option alert" data-val="Estranho">😟 Estranho</button><button class="option alert" data-val="Assustador">😨 Assustador</button></div>
+      <div id="alerta" class="notice"><strong>Que bom que você percebeu.</strong><p>Quando algo parece confuso, estranho ou assustador, conversar com um adulto ajuda a deixar a internet mais segura.</p><div class="grid"><button class="option" data-help="Contei para um adulto">☑️ Contei para um adulto</button><button class="option" data-help="Quero contar depois">☑️ Quero contar depois</button></div></div>
+      <Nav prev="4" next="6"></Nav></div></section>
+
+    <section id="screen6" class="step"><div class="card"><Top></Top><h2>6. Momento família</h2><p>Um espaço para conversar sem julgamento.</p>
+      <div class="field"><label>Uma coisa legal que vivi online foi...</label><textarea id="legal" oninput="save()"></textarea></div><div class="field"><label>Uma coisa que quero conversar melhor é...</label><textarea id="conversar" oninput="save()"></textarea></div><div class="field"><label>Nosso combinado para a próxima semana:</label><textarea id="combinado" oninput="save()"></textarea></div><Nav prev="5" next="7"></Nav></div></section>
+
+    <section id="screen7" class="step"><div class="card"><Top></Top><h2>7. Resumo semanal</h2><div id="weekly" class="summaryBox"></div><div class="btns"><button class="btn green" onclick="downloadImage('weekly')">Baixar imagem da semana</button><button class="btn warn" onclick="window.print()">Baixar PDF da semana</button></div><Nav prev="6" next="8"></Nav></div></section>
+
+    <section id="screen8" class="step"><div class="card"><Top></Top><h2>8. Resumo mensal</h2><p>O resumo mensal junta os registros salvos neste dispositivo.</p><div id="monthly" class="summaryBox"></div><div class="btns"><button class="btn green" onclick="saveWeekToMonth()">Salvar semana no mês</button><button class="btn green" onclick="downloadImage('monthly')">Baixar imagem do mês</button><button class="btn warn" onclick="window.print()">Baixar PDF do mês</button><button class="btn secondary" onclick="resetAll()">Começar nova jornada</button></div><Nav prev="7" next="0"></Nav></div></section>
+  </main>
+
+<script>
+const KEY='kiddle_jornada_digital_v1'; let data=JSON.parse(localStorage.getItem(KEY)||'{}'); let current=0;
+function $(id){return document.getElementById(id)}
+customElements.define('top-', class extends HTMLElement{});
+function inject(){document.querySelectorAll('Top').forEach(e=>e.outerHTML='<div class="noPrint"><div class="small">Progresso salvo automaticamente neste dispositivo</div><div class="progress"><div class="bar" id="bar"></div></div></div>');document.querySelectorAll('Nav').forEach(e=>{let p=e.getAttribute('prev'),n=e.getAttribute('next');e.outerHTML=`<div class="btns noPrint"><button class="btn secondary" onclick="go(${p})">Voltar</button><button class="btn" onclick="go(${n})">Continuar</button></div>`})}
+inject();
+function save(){['nome','idade','foraTela','legal','conversar','combinado'].forEach(id=>{if($(id)) data[id]=$(id).value}); localStorage.setItem(KEY,JSON.stringify(data)); update();}
+function setSingle(group,val){data[group]=val;save()}
+function toggleMulti(group,val){data[group]=data[group]||[]; data[group]=data[group].includes(val)?data[group].filter(x=>x!==val):[...data[group],val];save()}
+function go(n){current=n;document.querySelectorAll('.step').forEach((s,i)=>s.classList.toggle('active',i===n));update();scrollTo({top:0,behavior:'smooth'})}
+document.addEventListener('click',e=>{let b=e.target.closest('.option'); if(!b)return; let single=b.parentElement.dataset.group, multi=b.parentElement.dataset.multi; if(single)setSingle(single,b.dataset.val); if(multi)toggleMulti(multi,b.dataset.val); if(b.dataset.help){data.ajuda=b.dataset.help;save();}})
+function update(){['nome','idade','foraTela','legal','conversar','combinado'].forEach(id=>{if($(id)&&data[id]!==undefined&&$(id).value!==data[id])$(id).value=data[id]});document.querySelectorAll('[data-group]').forEach(g=>g.querySelectorAll('.option').forEach(b=>b.classList.toggle('selected',data[g.dataset.group]===b.dataset.val)));document.querySelectorAll('[data-multi]').forEach(g=>g.querySelectorAll('.option').forEach(b=>b.classList.toggle('selected',(data[g.dataset.multi]||[]).includes(b.dataset.val))));document.querySelectorAll('[data-help]').forEach(b=>b.classList.toggle('selected',data.ajuda===b.dataset.help));let nome=data.nome||'você';let poder=data.poder||'um superpoder especial';if($('avatarResult'))$('avatarResult').innerHTML=`Hoje, ${nome} é ${data.avatar||'✨'} uma Exploradora Digital com ${poder}!`;if($('missionDone'))$('missionDone').innerHTML=(data.missoes||[]).length?'⭐ Missão concluída!':'⭐ Marque suas missões da semana!';let risk=(data.emocoes||[]).some(x=>['Confuso','Estranho','Assustador'].includes(x));if($('alerta'))$('alerta').classList.toggle('show',risk);let bars=document.querySelectorAll('.bar');bars.forEach(b=>b.style.width=Math.min(100,current/8*100)+'%');renderSummaries();}
+function list(arr){return arr&&arr.length?arr.join(', '):'nenhum registro ainda'}
+function renderSummaries(){let nome=data.nome||'A criança';let territorios=data.territorios||[], missoes=data.missoes||[], semana=data.semana||[], emocoes=data.emocoes||[];let risk=emocoes.filter(x=>['Confuso','Estranho','Assustador'].includes(x));let week=`<h3>Resumo da semana de ${nome}</h3><p>Esta semana, ${nome} explorou <strong>${territorios.length}</strong> territórios digitais: ${list(territorios)}.</p><p>Completou <strong>${missoes.length}</strong> missões e registrou momentos importantes, como: ${list(semana)}.</p><p>Também fez atividades fora da tela, como: ${data.foraTela||'ainda não registrado'}.</p><p>Emoções registradas: ${list(emocoes)}.</p>${risk.length?`<p><strong>Ponto de atenção:</strong> marcou algo como ${risk.join(', ')} e ${data.ajuda?data.ajuda.toLowerCase():'pode conversar com um adulto'}.</p>`:'<p><strong>Ponto positivo:</strong> não houve registro de algo confuso, estranho ou assustador nesta semana.</p>'}<p><strong>Momento família:</strong> ${data.legal||'Ainda não preenchido'} ${data.conversar?`<br><strong>Para conversar:</strong> ${data.conversar}`:''} ${data.combinado?`<br><strong>Combinado:</strong> ${data.combinado}`:''}</p>`;if($('weekly'))$('weekly').innerHTML=week;let month=JSON.parse(localStorage.getItem(KEY+'_month')||'[]');let totalTerr=month.reduce((a,w)=>a+(w.territorios||0),0), totalMis=month.reduce((a,w)=>a+(w.missoes||0),0), alerts=month.reduce((a,w)=>a+(w.alertas||0),0);if($('monthly'))$('monthly').innerHTML=`<h3>Resumo do mês</h3><p>Até agora, foram salvas <strong>${month.length}</strong> semanas neste dispositivo.</p><p>Ao longo do mês, a família registrou <strong>${totalTerr}</strong> territórios digitais visitados e <strong>${totalMis}</strong> missões concluídas.</p><p>${alerts?`Apareceram <strong>${alerts}</strong> pontos de atenção para conversar com calma.`:'Não há pontos de atenção salvos no mês até agora.'}</p><p class="small">Para compor o mês, clique em “Salvar semana no mês” ao final de cada jornada semanal.</p>`}
+function saveWeekToMonth(){let month=JSON.parse(localStorage.getItem(KEY+'_month')||'[]');month.push({date:new Date().toLocaleDateString('pt-BR'),territorios:(data.territorios||[]).length,missoes:(data.missoes||[]).length,alertas:(data.emocoes||[]).filter(x=>['Confuso','Estranho','Assustador'].includes(x)).length});localStorage.setItem(KEY+'_month',JSON.stringify(month));renderSummaries();alert('Semana salva no resumo mensal!')}
+function resetAll(){if(confirm('Apagar a jornada atual deste dispositivo?')){localStorage.removeItem(KEY);data={};go(0);location.reload()}}
+function downloadImage(id){let node=$(id);let svg=`<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900"><foreignObject width="100%" height="100%"><div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Arial;padding:34px;background:#fff8ec;color:#243142;font-size:22px;line-height:1.45">${node.innerHTML}</div></foreignObject></svg>`;let blob=new Blob([svg],{type:'image/svg+xml'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='minha-jornada-digital.svg';a.click();URL.revokeObjectURL(url)}
+update();
+</script>
+</body>
+</html>
